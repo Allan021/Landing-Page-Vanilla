@@ -1,0 +1,369 @@
+:root {
+  --main-color: #eabc14;
+  --text-color: #d29906;
+  --title-opaque-color: rgba(10, 10, 10, 0.6);
+  --title-text-color: #3895ea;
+  --gray-color: #787d8230;
+  --border-color: #c4c4c4;
+  --placeholder-color: #a4a4a4;
+  --facebook-color: #1877f2;
+  --linkedin-color: #0077b5;
+  --github-color: #666666;
+  --twitter-color: #1da1f2;
+  --youtube-color: #ff0000;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-height: 80vh;
+  min-height: 400px;
+  height: 600px;
+}
+
+.hero-image {
+  background-image: url("../images/hero-image.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4d03f;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+  opacity: 0.6;
+}
+
+.contenedor {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+}
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.brand:hover {
+  cursor: pointer;
+  animation: latidos 2s infinite;
+  transform-origin: center;
+  transition: all 0.6s ease-in-out;
+}
+
+@keyframes latidos {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.content-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: border 0.6 ease;
+}
+
+ul {
+  list-style: none;
+}
+.navegacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+.navegacion > li > a:hover {
+  border-bottom: 1px solid white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin: 10% auto;
+  padding: 20px;
+  border: 5px solid white;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.round-image {
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/Allan.jpg");
+  z-index: 2;
+  background-size: cover;
+  bottom: -15%;
+  right: 43.5%;
+  border: 5px solid white;
+}
+
+.logo > h3 {
+  margin-top: 0;
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.logo > p {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+/*Acerca de Nosotros*/
+
+.about-me {
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 34px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.sobre-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+/*Mis Trabajos*/
+
+.mis-trabajos {
+  background-color: var(--gray-color);
+  padding-top: 30px;
+  margin-top: 30px;
+  padding-bottom: 100px;
+}
+
+.text-primary {
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--title-opaque-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.title {
+  color: var(--title-text-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.desc {
+  color: var(--placeholder-color);
+  font-size: 14px;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+.rounded {
+  min-height: 288px;
+  border-radius: 15px;
+}
+
+/*Contacto*/
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+input {
+  font-family: "Open Sans", "Helvetica";
+
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+}
+input:focus {
+  border: 3px solid var(--text-color);
+  border-radius: 15px;
+  outline: none;
+}
+.grid-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
+}
+
+textarea {
+  margin-top: -110px;
+  font-family: "Open Sans", "Helvetica";
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+  resize: none;
+}
+textarea:focus {
+  border: 3px solid var(--text-color);
+  border-radius: 15px;
+  outline: none;
+}
+
+.btn {
+  height: 50px;
+  margin-top: 20px;
+  width: 100px;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  padding: auto 20px;
+  margin: 20px auto;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--text-color);
+}
+.btn-primary:hover {
+  background-color: var(--main-color);
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #f4d03f;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+  height: 200px;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facebook {
+  background-color: var(--facebook-color);
+}
+.linkedin {
+  background-color: var(--linkedin-color);
+}
+
+.youtube {
+  background-color: var(--youtube-color);
+}
+.github {
+  background-color: var(--github-color);
+}
+
+.twitter {
+  background-color: var(--twitter-color);
+}
+
+.social-media {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-media > .icon {
+  margin-right: 20px;
+}
+
+.copy {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.copy > p {
+  margin: 0px;
+}
+
+.copy > p > span {
+  font-weight: 700;
+}
